@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HistorySite.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table align="center" class="tblHeader">
+            <tr>
+                <td style="width:20%"></td>
+                <td style="width:20%"><%="Welcome " + Session["userName"] %></td>
+                <td runat="server" id="td"></td>
+            </tr>
+        </table>
+        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="logoutbtn" visible="false" BorderColor="Red" BackColor="Red"/>
+        <div id="mainBar">
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: row; gap: 6px; align-items: center;">
+                <li id="bar0" runat="server"><a href="Main.aspx" style="font-family: cursive; height:40px;">Main Page</a></li>
+                <li id="bar1" runat="server"><a href="Register.aspx"  visible="false" style="font-family: cursive; height:40px;">sign up</a></li>
+                <li id="bar2" runat="server"><a href="Login.aspx"  visible="false" style="font-family: cursive; height:40px;">log in</a></li>
+                <li id="bar3" runat="server"><a href="FrenchRevolution.aspx"  visible="false" style="font-family: cursive; height:40px;">French Revolution</a></li>
+                <li id="bar4" runat="server"><a href="IndustrialRevolution.aspx"  visible="false" style="font-family: cursive; height:40px;">Industrial Revolution</a></li>
+                <li id="bar5" runat="server"><a href="MoonLanding.aspx"  visible="false" style="font-family: cursive; height:40px;">Moon Landing</a></li>
+                <li id="bar6" runat="server"><a href="WorldWarOne.aspx"  visible="false" style="font-family: cursive; height:40px;">World War One</a></li>
+                <li id="bar7" runat="server"><a href="AmericaDiscovery.aspx"  visible="false" style="font-family: cursive; height:40px;">America Discovery</a></li>
+                <li id= "bar8" runat="server"><a href="UsersTable.aspx" visible="false" style="font-family: cursive; height:40px;">Users</a></li>
+                 
+
+            </ul>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+</body>
+</html>
